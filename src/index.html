@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Coffee Manufacture</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!--TOP NAVBAR-->
+    <nav class="nav">
+      <div class="container">
+        <div class="logo">
+          <h3 class="logo__top">el tigre</h3>
+          <h3 class="logo__tagline">venezuela coffee beans</h3>
+        </div>
+        <ul>
+          <li><a class="nav-link" href="#home">home</a></li>
+          <li><a class="nav-link" href="#products">products</a></li>
+          <li><a class="nav-link" href="#contact">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--HERO-->
+    <section class="hero">
+      <div class="hero__inner">
+        <h1>
+          home of<br />
+          original tastes
+        </h1>
+      </div>
+
+      <div class="hero__discover">
+        <p>discover</p>
+        <div class="scroll-icon"></div>
+      </div>
+    </section>
+
+    <!--____HOME PAGE-->
+    <section id="home">
+      <div class="products">
+        <div class="container" data-container="productsContainer">
+          <h2 class="section-title">products</h2>
+        </div>
+      </div>
+
+      <!--about-->
+      <div class="about">
+        <div class="container">
+          <h2 class="section-title">about us</h2>
+          <p class="about__description">
+            Who are we? Just a bunch of friends with a love for a good coffee and desire to create something new,
+            something original.
+          </p>
+          <p class="about__description">
+            Our coffee reflect us - young, wild and free. We are on the journey of new tastes...
+          </p>
+          <p class="about__join">Join us!</p>
+        </div>
+      </div>
+    </section>
+
+    <!--_____PRODUCT PAGE -->
+
+    <!--_____CONTACT PAGE -->
+    <section id="#contact">
+      <div class="container">
+        <form></form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>&copy; 2021 EL TIGRE inc.</p>
+    </footer>
+
+    <!--PRODUCT TEMPLATE-->
+
+    <script id="template-products" type="text/x-handlebars-template">
+      <div class="col-6 product-description">
+        <h2>01 {{name}}</h2>
+        <p>{{description}}</p>
+      <div>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>

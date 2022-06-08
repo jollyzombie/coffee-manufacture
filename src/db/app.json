@@ -1,1 +1,28 @@
-{}
+{
+  "products": [
+    {
+        "name": "La Lagartija",
+        "description": "Treat yourself with this soft, freshly roast coffee. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
+        "roasting": "5/10",
+        "intensity": "6/10",
+        "popularBadge": "true",
+        "image": "src/images/coffee-1.png"
+    },
+    {
+      "name": "El Tigre",
+      "description": "Treat yourself with this soft, freshly roast coffee. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
+      "roasting": "8/10",
+      "intensity": "9/10",
+      "popularBadge": "false",
+      "image": "src/images/coffee-2.png"
+    },
+    {
+      "name": "La Cucaracha",
+      "description": "Treat yourself with this soft, freshly roast coffee. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
+      "roasting": "3/10",
+      "intensity": "7/10",
+      "popularBadge": "false",
+      "image": "src/images/coffee-3.png"
+    }
+  ]
+}
