@@ -1,22 +1,54 @@
-import { settings } from './settings.js'
+import Products from './Products.js';
+import { select } from './settings.js';
 
 const app = {
-    initData: function() {
-        const url = settings.db.url + '/' + settings.db.products;
-        this.data = {};
-        fetch(url)
-            .then((rawResponse) => {
-                return rawResponse.json();
-            })
-            .then((parsedResponse) => {
-                this.data.products = parsedResponse;
-            });
-    },
 
-    init: function() {
-        const thisApp = this;
-        thisApp.initData();
-    },
-}
+  init: function () {
+    const thisApp = this;
+
+    new Products();
+    thisApp.getElement();
+    thisApp.initPageListener();
+  },
+
+  getElement: function () {
+    const thisApp = this;
+
+    thisApp.dom = {
+      subPages: document.querySelectorAll(select.pages),
+      contact: document.querySelector(select.contact),
+      home: document.querySelector(select.home),
+      product: document.querySelector(select.product)
+    }
+  },
+
+  initActivatePage: function (pageId) {
+    const thisApp = this;
+
+    for (const page of thisApp.dom.subPages) {
+      page.classList.add(select.hidden);
+    }
+    for (const page of thisApp.dom.subPages) {
+      let pageAttributes = page.getAttribute('id');
+      if (pageAttributes == pageId) {
+        page.classList.remove(select.hidden);
+      }
+    }
+  },
+
+  initPageListener: function () {
+
+    const thisApp = this;
+    const links = document.querySelectorAll(select.links);
+
+    for (const link of links) {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        const clickedElement = event.target.getAttribute('href').substring(1);
+        thisApp.initActivatePage(clickedElement);
+      });
+    }
+  }
+};
 
 app.init();

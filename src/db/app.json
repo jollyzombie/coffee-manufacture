@@ -1,28 +1,36 @@
 {
-  "products": [
-    {
-        "name": "La Lagartija",
-        "description": "Treat yourself with this soft, freshly roast coffee. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
+  "data": {
+      "firstProduct": {
+        "id": "01.",
+        "name": "la lagartija",
+        "description": "Mysterious and treacherous... The best choice for the start of your journey! It will provide you a rich delicious flavor.",
         "roasting": "5/10",
         "intensity": "6/10",
-        "popularBadge": "true",
-        "image": "src/images/coffee-1.png"
-    },
-    {
-      "name": "El Tigre",
-      "description": "Treat yourself with this soft, freshly roast coffee. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
-      "roasting": "8/10",
-      "intensity": "9/10",
-      "popularBadge": "false",
-      "image": "src/images/coffee-2.png"
-    },
-    {
-      "name": "La Cucaracha",
-      "description": "Treat yourself with this soft, freshly roast coffee. The recipe has been handed down from generation to generation in our family and it has won us several first place prizes in local competitions.",
-      "roasting": "3/10",
-      "intensity": "7/10",
-      "popularBadge": "false",
-      "image": "src/images/coffee-3.png"
+        "popular": true,
+        "badge": "/images/Badge.png",
+        "image": "/images/coffee-1.png"
+      },
+
+      "secondProduct": {
+        "id": "02.",
+        "name": "el tigre",
+        "description": "Really dark coffee, only for the real gourmets. It has bitter flavor of grapefruits and is mixed with a little bit of peanuts with caramel.",
+        "roasting": "8/10",
+        "intensity": "9/10",
+        "popular": false,
+        "badge": "/images/Badge.png",
+        "image": "/images/coffee-2.png"
+      },
+
+      "thirdProduct": {
+        "id": "03.",
+        "name": "la cucaracha",
+        "description": "Sweet and intense with a big amount of different flavors. Caramel,  grapes, strwaberry, you name it! Its great choice for warm summer days.",
+        "roasting": "3/10",
+        "intensity": "7/10",
+        "popular": false,
+        "badge": "/images/Badge.png",
+        "image": "/images/coffee-3.png"
+      }
     }
-  ]
 }

@@ -11,8 +11,9 @@ h1 {
     content: '';
     margin: 26px auto;
     max-width: 200px;
-    height: 6px;
-    background-color: $color-accent;
+    height: 4px;
+    border-radius: $radius;
+    background: $color-accent;
   }
 }
 
@@ -45,10 +46,11 @@ p {
   &:after {
     position: absolute;
     content: '';
-    bottom: -12px;
+    bottom: -1px;
     left: 50%;
     width: 550px;
-    height: 6px;
+    height: 4px;
+    border-radius: $radius;
     transform: translateX(-50%);
     background: $color-accent;
   }

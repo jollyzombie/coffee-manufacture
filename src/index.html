@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Coffee Manufacture</title>
 
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -19,9 +19,9 @@
           <h3 class="logo__tagline">venezuela coffee beans</h3>
         </div>
         <ul>
-          <li><a class="nav-link" href="#home">home</a></li>
+          <li><a class="nav-link" href="/#home">home</a></li>
           <li><a class="nav-link" href="#products">products</a></li>
-          <li><a class="nav-link" href="#contact">contact</a></li>
+          <li><a class="nav-link" href="#form">contact</a></li>
         </ul>
       </div>
     </nav>
@@ -42,11 +42,9 @@
     </section>
 
     <!--____HOME PAGE-->
-    <section id="home">
+    <section id="#home">
       <div class="products">
-        <div class="container" data-container="productsContainer">
-          <h2 class="section-title">products</h2>
-        </div>
+        <div class="container" data-container="productsContainer"></div>
       </div>
 
       <!--about-->
@@ -66,11 +64,27 @@
     </section>
 
     <!--_____PRODUCT PAGE -->
+    <section id="#products">
+    <div class="products">
+      <div class="container" data-container="productsContainer"></div>
+    </div>
+  </section>
+
 
     <!--_____CONTACT PAGE -->
-    <section id="#contact">
+    <section id="#form">
       <div class="container">
-        <form></form>
+        <h2>contact us</h2>
+        <form>
+            <label for="name">name</label>
+            <input type="text" id="name" name="name" value="">
+            <label for="title">title</label>
+            <input type="text" id="title" name="title" value="">
+            <label for="message">message</label>
+            <textarea row="3" type="text" id="message" name="message" value="">
+            </textarea>
+            <button type="submit" class="btn">submit</button>
+        </form>
       </div>
     </section>
 
@@ -82,10 +96,69 @@
     <!--PRODUCT TEMPLATE-->
 
     <script id="template-products" type="text/x-handlebars-template">
-      <div class="col-6 product-description">
-        <h2>01 {{name}}</h2>
-        <p>{{description}}</p>
-      <div>
+      <div class="row">
+        <h2 class="section-title">products</h2>
+      </div>
+      <div class="row">
+          <div class="col-6">
+              <h3>{{ firstProduct.id }} <span>{{ firstProduct.name }}</span></h3>
+                  <p class="description">{{ firstProduct.description }}</p>
+              <div>
+                  <div class="row">
+                      <div class="col-6">
+                          <p class="params">roasting: <span>{{ firstProduct.roasting }}</span></p>
+                          <p class="params">intensity: <span>{{ firstProduct.intensity }}</span></p>
+                      </div>
+                      <div class="col-6">
+                          <img src="{{firstProduct.badge}}" class="badge {{#if firstProduct.popular}}visible{{/if}}" alt="badge">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-6">
+            <img class="product-image" src= "{{firstProduct.image}}" alt="la-lagartija">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-6">
+            <img class="product-image" src= "{{secondProduct.image}}" alt="el-tigre">
+          </div>
+          <div class="col-6">
+              <h3>{{ secondProduct.id }} <span>{{ secondProduct.name }}</span></h3>
+                  <p class="description">{{ secondProduct.description }}</p>
+              <div>
+                  <div class="row">
+                      <div class="col-6">
+                          <p class="params">roasting: <span>{{ secondProduct.roasting }}</span></p>
+                          <p class="params">intensity: <span>{{ secondProduct.intensity }}</span></p>
+                      </div>
+                      <div class="col-6">
+                          <img src="{{secondProduct.badge}}" class="badge {{#if secondProduct.popular}}visible{{/if}}" alt="badge">
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div class="col-6">
+              <h3>{{ thirdProduct.id }} <span> {{ thirdProduct.name }}</span></h3>
+                  <p class="description">{{ thirdProduct.description }}</p>
+              <div>
+                  <div class="row">
+                      <div class="col-6">
+                          <p class="params">roasting: <span>{{ thirdProduct.roasting }}</span></p>
+                          <p class="params">intensity: <span>{{ thirdProduct.intensity }}</span></p>
+                      </div>
+                      <div class="col-6">
+                          <img src="{{ thirdProduct.badge }}" class="badge {{#if thirdProduct.popular}}visible{{/if}}" alt="badge">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-6">
+            <img class="product-image" src="{{thirdProduct.image}}" alt="la-cucaracha">
+          </div>
+      </div>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
