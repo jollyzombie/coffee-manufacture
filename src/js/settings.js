@@ -1,9 +1,12 @@
 export const select = {
-  productItem : '#template-products',
-  productsContainer: '[data-container="productsContainer"]',
+  templateOf: {
+    productItem : '#template-products',
+  },
+  containerOf: {
+    productsContainer: '[data-container="productsContainer"]',
+  },
   product: '#products',
   contact: '#form',
-  startingPages: '#products, #form',
   home: '#home',
   footer: 'footer',
   about:'#about',
@@ -21,5 +24,5 @@ export const settings = {
 
 
 export const templates = {
-  productItem: Handlebars.compile(document.querySelector(select.productItem).innerHTML),
+  productItem: Handlebars.compile(document.querySelector(select.templateOf.productItem).innerHTML),
 };

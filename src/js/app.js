@@ -19,7 +19,7 @@ const app = {
       contact: document.querySelector(select.contact),
       home: document.querySelector(select.home),
       product: document.querySelector(select.product)
-    }
+    };
   },
 
   initActivatePage: function (pageId) {

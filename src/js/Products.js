@@ -27,15 +27,10 @@ class Products {
     const thisProduct = this;
     const generatedHTML = templates.productItem(thisData);
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
-    const productsContainer = document.querySelectorAll(select.productsContainer);
+    const productsContainer = document.querySelectorAll(select.containerOf.productsContainer);
 
     for (const containers of productsContainer) {
       containers.appendChild(thisProduct.element.cloneNode(true));
-    }
-    const startSections = document.querySelectorAll(select.startingPages);
-
-    for (const section of startSections) {
-      section.classList.add(select.hidden);
     }
   }
 }
