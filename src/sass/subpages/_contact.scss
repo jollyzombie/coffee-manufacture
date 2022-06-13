@@ -1,0 +1,81 @@
+#form {
+  position: relative;
+  width: 500px;
+  margin: 50px auto 100px auto;
+}
+
+input {
+  font-family: $font-text;
+  text-transform: uppercase;
+  width: 470px;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+
+  background: transparent;
+  outline: none;
+  color: $color-accent;
+
+  border: solid 1px $color-accent;
+  border-radius: $radius;
+  margin: 10px 0;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+  background: $color-accent;
+  color: $color-light;
+}
+
+textarea {
+  width: 470px;
+  max-width: 470px;
+  height: 110px;
+  max-height: 110px;
+  padding: 15px;
+  margin: 10px 0;
+
+  background: transparent;
+  outline: none;
+
+  color: $color-accent;
+  text-transform: uppercase;
+  font-family: $font-text;
+
+
+  border: solid 1px $color-accent;
+  border-radius: $radius;
+
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+  background: $color-accent;
+  color: $color-light;
+}
+
+#submit {
+
+  padding: 0;
+  margin: 10px 0;
+
+  font-family: $font-text;
+  color: $color-accent;
+  text-transform: uppercase;
+
+  outline: none;
+  cursor: pointer;
+
+  border: solid 1px $color-accent;
+  border-radius: $radius;
+}
+
+#submit:hover {
+  color: $color-light;
+}

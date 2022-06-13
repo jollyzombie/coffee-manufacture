@@ -21,7 +21,7 @@
         <ul>
           <li><a class="nav-link" href="#home">home</a></li>
           <li><a class="nav-link" href="#products">products</a></li>
-          <li><a class="nav-link" href="#form">contact</a></li>
+          <li><a class="nav-link" href="#contact">contact</a></li>
         </ul>
       </div>
     </nav>
@@ -42,7 +42,7 @@
     </section>
 
     <!--____HOME PAGE-->
-    <section id="#home">
+    <section id="home">
       <div class="products">
         <div class="container" data-container="productsContainer"></div>
       </div>
@@ -64,7 +64,7 @@
     </section>
 
     <!--_____PRODUCT PAGE -->
-    <section id="#products">
+    <section id="products">
     <div class="products">
       <div class="container" data-container="productsContainer"></div>
     </div>
@@ -72,18 +72,17 @@
 
 
     <!--_____CONTACT PAGE -->
-    <section id="#form">
+    <section id="contact">
       <div class="container">
-        <h2>contact us</h2>
-        <form>
-            <label for="name">name</label>
-            <input type="text" id="name" name="name" value="">
-            <label for="title">title</label>
-            <input type="text" id="title" name="title" value="">
-            <label for="message">message</label>
-            <textarea row="3" type="text" id="message" name="message" value="">
-            </textarea>
-            <button type="submit" class="btn">submit</button>
+        <h2 class="section-title">contact us</h2>
+        <p>If you have any questions or suggestions feel free to contact us!</p>
+        <form id="form" class="topBefore">
+
+          <input id="name" type="text" placeholder="name">
+          <input id="email" type="text" placeholder="e-mail">
+          <textarea id="message" type="text" placeholder="message"></textarea>
+          <button type="submit">send</button>
+
         </form>
       </div>
     </section>
@@ -99,66 +98,37 @@
       <div class="row">
         <h2 class="section-title">products</h2>
       </div>
-      <div class="row">
-          <div class="col-6">
-              <h3>{{ firstProduct.id }} <span>{{ firstProduct.name }}</span></h3>
-                  <p class="description">{{ firstProduct.description }}</p>
+      {{#each products}}
+      <div class="row product">
+          <div class="col-6 description-wrapper">
+              <h3>{{ id }} <span>{{ name }}</span></h3>
+                  <p class="description">{{ description }}</p>
               <div>
                   <div class="row">
                       <div class="col-6">
-                          <p class="params">roasting: <span>{{ firstProduct.roasting }}</span></p>
-                          <p class="params">intensity: <span>{{ firstProduct.intensity }}</span></p>
+                          <p class="params">roasting: <span>{{ roasting }}</span></p>
+                          <p class="params">intensity: <span>{{ intensity }}</span></p>
                       </div>
                       <div class="col-6">
-                          <img src="{{firstProduct.badge}}" class="badge {{#if firstProduct.popular}}visible{{/if}}" alt="badge">
+                          <img src="{{badge}}" class="badge {{#if popular}}visible{{/if}}" alt="badge">
                       </div>
                   </div>
               </div>
           </div>
           <div class="col-6">
-            <img class="product-image" src= "{{firstProduct.image}}" alt="la-lagartija">
+            <img class="product-image" src= "{{image}}" alt="la-lagartija">
+            <div class="prices">
+              <p class="old-price">${{ regularPrice }}</p>
+              <p class="price-line"></p>
+              <p class="new-price">${{ promoPrice }}</p>
+            </div>
+            </div>
           </div>
-      </div>
-      <div class="row">
-          <div class="col-6">
-            <img class="product-image" src= "{{secondProduct.image}}" alt="el-tigre">
           </div>
-          <div class="col-6">
-              <h3>{{ secondProduct.id }} <span>{{ secondProduct.name }}</span></h3>
-                  <p class="description">{{ secondProduct.description }}</p>
-              <div>
-                  <div class="row">
-                      <div class="col-6">
-                          <p class="params">roasting: <span>{{ secondProduct.roasting }}</span></p>
-                          <p class="params">intensity: <span>{{ secondProduct.intensity }}</span></p>
-                      </div>
-                      <div class="col-6">
-                          <img src="{{secondProduct.badge}}" class="badge {{#if secondProduct.popular}}visible{{/if}}" alt="badge">
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-6">
-              <h3>{{ thirdProduct.id }} <span> {{ thirdProduct.name }}</span></h3>
-                  <p class="description">{{ thirdProduct.description }}</p>
-              <div>
-                  <div class="row">
-                      <div class="col-6">
-                          <p class="params">roasting: <span>{{ thirdProduct.roasting }}</span></p>
-                          <p class="params">intensity: <span>{{ thirdProduct.intensity }}</span></p>
-                      </div>
-                      <div class="col-6">
-                          <img src="{{ thirdProduct.badge }}" class="badge {{#if thirdProduct.popular}}visible{{/if}}" alt="badge">
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="col-6">
-            <img class="product-image" src="{{thirdProduct.image}}" alt="la-cucaracha">
-          </div>
-      </div>
+
+
+        </div>
+      {{/each}}
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>

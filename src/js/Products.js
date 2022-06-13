@@ -25,7 +25,7 @@ class Products {
   getProducts(thisData) {
 
     const thisProduct = this;
-    const generatedHTML = templates.productItem(thisData);
+    const generatedHTML = templates.productItem({products: thisData});
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
     const productsContainer = document.querySelectorAll(select.containerOf.productsContainer);
 

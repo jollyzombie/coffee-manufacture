@@ -1,5 +1,5 @@
 import Products from './Products.js';
-import { select } from './settings.js';
+import { select, homePageName } from './settings.js';
 
 const app = {
 
@@ -9,6 +9,7 @@ const app = {
     new Products();
     thisApp.getElement();
     thisApp.initPageListener();
+    thisApp.initActivatePage(homePageName);
   },
 
   getElement: function () {
@@ -43,7 +44,6 @@ const app = {
 
     for (const link of links) {
       link.addEventListener('click', function (event) {
-        event.preventDefault();
         const clickedElement = event.target.getAttribute('href').substring(1);
         thisApp.initActivatePage(clickedElement);
       });

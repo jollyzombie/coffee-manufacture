@@ -1,3 +1,5 @@
+export const homePageName = 'home';
+
 export const select = {
   templateOf: {
     productItem : '#template-products',
@@ -6,11 +8,11 @@ export const select = {
     productsContainer: '[data-container="productsContainer"]',
   },
   product: '#products',
-  contact: '#form',
+  contact: '#contact',
   home: '#home',
   footer: 'footer',
   about:'#about',
-  pages: '#home, #products, #form',
+  pages: '#home, #products, #contact',
   links: '.nav-link',
   hidden: 'hidden',
 };
