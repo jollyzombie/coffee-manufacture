@@ -4,6 +4,10 @@
   margin: 50px auto 100px auto;
 }
 
+#contact p {
+  text-align: center;
+}
+
 input {
   font-family: $font-text;
   text-transform: uppercase;
@@ -23,11 +27,11 @@ input {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
-}
 
-input:hover {
-  background: $color-accent;
-  color: $color-light;
+  &:hover {
+    background: $color-accent;
+    color: $color-light;
+  }
 }
 
 textarea {
@@ -45,7 +49,6 @@ textarea {
   text-transform: uppercase;
   font-family: $font-text;
 
-
   border: solid 1px $color-accent;
   border-radius: $radius;
 
@@ -53,16 +56,15 @@ textarea {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: $color-accent;
+    color: $color-light;
+  }
 }
 
-textarea:hover {
-  background: $color-accent;
-  color: $color-light;
-}
-
-#submit {
-
-  padding: 0;
+button {
+  padding: 10px 25px;
   margin: 10px 0;
 
   font-family: $font-text;
@@ -74,8 +76,9 @@ textarea:hover {
 
   border: solid 1px $color-accent;
   border-radius: $radius;
-}
 
-#submit:hover {
-  color: $color-light;
+  &:hover {
+    color: $color-light;
+    background-color: $color-accent;
+  }
 }

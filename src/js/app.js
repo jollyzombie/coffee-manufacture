@@ -2,7 +2,6 @@ import Products from './Products.js';
 import { select, homePageName } from './settings.js';
 
 const app = {
-
   init: function () {
     const thisApp = this;
 
@@ -12,6 +11,16 @@ const app = {
     thisApp.initActivatePage(homePageName);
   },
 
+  newHeader: (function () {
+    const header = [
+      'Home of <br> Original Tastes',
+      'Real Venezuela,<br> Real Coffee',
+      'Taste Real <br> Venezuela'
+    ];
+    const randomHeader = Math.floor(Math.random() * header.length);
+    document.getElementById('heroDisplay').innerHTML = header[randomHeader];
+  })(),
+
   getElement: function () {
     const thisApp = this;
 
@@ -19,7 +28,7 @@ const app = {
       subPages: document.querySelectorAll(select.pages),
       contact: document.querySelector(select.contact),
       home: document.querySelector(select.home),
-      product: document.querySelector(select.product)
+      product: document.querySelector(select.product),
     };
   },
 
@@ -38,7 +47,6 @@ const app = {
   },
 
   initPageListener: function () {
-
     const thisApp = this;
     const links = document.querySelectorAll(select.links);
 
@@ -48,7 +56,7 @@ const app = {
         thisApp.initActivatePage(clickedElement);
       });
     }
-  }
+  },
 };
 
 app.init();
