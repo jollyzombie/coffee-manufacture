@@ -6,6 +6,13 @@
   font-weight: $font-bold;
   text-transform: uppercase;
 
+  @media (max-width: 599px) {
+    font-size: $base-size * 3;
+  }
+  @media (min-width: 600px) and (max-width: 1100px) {
+    font-size: $base-size * 4;
+  }
+
   &:after {
     display: block;
     content: '';
@@ -25,6 +32,10 @@ h2 {
   letter-spacing: 5px;
   padding: 20px 0;
   text-align: center;
+
+  @media (max-width: 599px), (min-width: 600px) and (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 h3 {
@@ -37,6 +48,10 @@ p {
   font-size: 15px;
   font-weight: $font-regular;
   letter-spacing: 1px;
+
+  @media (max-width: 599px), (min-width: 600px) and (max-width: 768px) {
+    font-size: $base-size * 1.5;
+  }
 }
 
 .section-title {
@@ -53,5 +68,16 @@ p {
     border-radius: $radius;
     transform: translateX(-50%);
     background: $color-accent;
+
+    @media (max-width: 599px) {
+      width: 250px;
+    }
+    @media (min-width: 600px) and (max-width: 768px) {
+      width: 420px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    font-size: $base-size * 3;
   }
 }

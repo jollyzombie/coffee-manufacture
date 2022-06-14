@@ -12,24 +12,33 @@
 
   <body>
     <!--TOP NAVBAR-->
-    <nav class="nav">
-      <div class="container">
+
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
         <div class="logo">
           <h3 class="logo__top">el tigre</h3>
           <h3 class="logo__tagline">venezuela coffee beans</h3>
         </div>
-        <ul>
-          <li><a class="nav-link" href="#home">home</a></li>
-          <li><a class="nav-link" href="#products">products</a></li>
-          <li><a class="nav-link" href="#contact">contact</a></li>
-        </ul>
       </div>
-    </nav>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-link">
+        <a href="#home">home</a>
+        <a href="#products">products</a>
+        <a href="#contact">contact</a>
+      </div>
+    </div>
 
     <!--HERO-->
     <section class="hero">
-      <div class="hero__inner" id="heroDisplay">
-      </div>
+      <div class="hero__inner" id="heroDisplay"></div>
 
       <div class="hero__discover">
         <p>discover</p>
@@ -44,66 +53,64 @@
       </div>
 
       <!--about-->
-      <div class="main-carousel js-flickity" id="about" data-flickity='{ "autoPlay": 2500, "prevNextButtons": false, "pageDots": false }'>
-      <div class="carousel-cell">
-        <h2 class="section-title">about us</h2>
-        <div class="box">
-          <div class="box__img">
-            <img src="images/1.png" alt="ping-nihao">
+      <div
+        class="main-carousel js-flickity"
+        id="about"
+        data-flickity='{ "autoPlay": 2500, "prevNextButtons": false, "pageDots": false }'
+      >
+        <div class="carousel-cell">
+          <h2 class="section-title">about us</h2>
+          <div class="box">
+            <div class="box__img">
+              <img src="images/1.png" alt="ping-nihao">
+            </div>
+            <div class="box-description">
+              <h4>Ping<span> Nihao</span></h4>
+              <p>
+                Ping is the youngest in the team. He doesn't like calling coffee a mysterious act. He says, a good
+                coffee is like a mathemathical formula. Once you figured it out, every coffee you make is a masterpiece.
+              </p>
+            </div>
           </div>
-          <div class="box-description">
-            <h4>Ping<span> Nihao</span></h4>
-            <p>
-              Ping is the youngest in the team. He doesn't like calling coffee a
-              mysterious act. He says, a good coffee is like a mathemathical
-              formula. Once you figured it out, every coffee you make is a
-              masterpiece.
-            </p>
+        </div>
+        <div class="carousel-cell">
+          <h2 class="section-title">about us</h2>
+          <div class="box">
+            <div class="box__img">
+              <img src="images/2.png" alt="max-selfish">
+            </div>
+            <div class="box-description">
+              <h4>Max<span> Selfish</span></h4>
+              <p>
+                Max is the austrian barista with years of experience from the hotels across the whole Europe. "Venezuela
+                coffee was a lighterning experience for me! I have never drink such an amazing coffee!", he says.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-cell">
+          <h2 class="section-title">about us</h2>
+          <div class="box">
+            <div class="box__img">
+              <img src="images/3.png" alt="elizabeth-doherty">
+            </div>
+            <div class="box-description">
+              <h4>Elizabeth<span> Doherty</span></h4>
+              <p>
+                Experienced barista from Bahamas. She says the Venezuela has opened her eyes on coffee. "It's not about
+                the taste", she says. "It's all about the feelings".
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="carousel-cell">
-        <h2 class="section-title">about us</h2>
-        <div class="box">
-          <div class="box__img">
-            <img src="images/2.png" alt="max-selfish">
-          </div>
-          <div class="box-description">
-            <h4>Max<span> Selfish</span></h4>
-            <p>
-              Max is the austrian barista with years of experience from the
-              hotels across the whole Europe. "Venezuela coffee was a
-              lighterning experience for me! I have never drink such an amazing
-              coffee!", he says.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-cell">
-        <h2 class="section-title">about us</h2>
-        <div class="box">
-          <div class="box__img">
-            <img src="images/3.png" alt="elizabeth-doherty">
-          </div>
-          <div class="box-description">
-            <h4>Elizabeth<span> Doherty</span></h4>
-            <p>
-              Experienced barista from Bahamas. She says the Venezuela has
-              opened her eyes on coffee. "It's not about the taste", she says.
-              "It's all about the feelings".
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-</section>
+    </section>
     <!--_____PRODUCT PAGE -->
     <section id="products">
-    <div class="products">
-      <div class="container" data-container="productsContainer"></div>
-    </div>
-  </section>
-
+      <div class="products">
+        <div class="container" data-container="productsContainer"></div>
+      </div>
+    </section>
 
     <!--_____CONTACT PAGE -->
     <section id="contact">
@@ -111,12 +118,10 @@
         <h2 class="section-title">contact us</h2>
         <p>If you have any questions or suggestions feel free to contact us!</p>
         <form id="form" class="topBefore">
-
           <input id="name" type="text" placeholder="name">
           <input id="email" type="text" placeholder="e-mail">
           <textarea id="message" type="text" placeholder="message"></textarea>
           <button type="submit">send</button>
-
         </form>
       </div>
     </section>
@@ -134,22 +139,22 @@
       </div>
       {{#each products}}
       <div class="row product">
-          <div class="col-sm-6 description-wrapper">
+          <div class="col-sm description-wrapper">
               <h3>{{ id }} <span>{{ name }}</span></h3>
                   <p class="description">{{ description }}</p>
               <div>
                   <div class="row">
-                      <div class="col-sm-6">
+                      <div class="col-sm">
                           <p class="params">roasting: <span>{{ roasting }}</span></p>
                           <p class="params">intensity: <span>{{ intensity }}</span></p>
                       </div>
-                      <div class="col-sm-6">
+                      <div class="col-sm">
                           <img src="{{badge}}" class="badge {{#if popular}}visible{{/if}}" alt="badge">
                       </div>
                   </div>
               </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm">
             <img class="product-image" src= "{{image}}" alt="la-lagartija">
             <div class="prices">
               <p class="old-price">${{ regularPrice }}</p>

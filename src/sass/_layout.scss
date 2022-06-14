@@ -1,19 +1,19 @@
 /* LOGO */
 .logo {
   display: inline-block;
-  line-height: 0.5;
+  line-height: 0.7;
+  margin-left: 45px;
 
   &__top {
     text-transform: uppercase;
     color: $color-light;
     font-size: $base-size * 3;
-    padding: 10px 5px;
+    padding: 10px 0;
     font-weight: $font-black;
     letter-spacing: 5px;
   }
 
   &__tagline {
-    margin: 5px;
     font-size: $base-size * 1.2;
     font-family: $font-header;
     font-weight: $font-regular;
@@ -26,42 +26,101 @@
 
 /* STICKY NAVIGATION */
 .nav {
-  position: fixed;
+  height: 70px;
+  width: 100%;
   background-color: $color-dark;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: $transition;
-  color: $color-light;
-  text-transform: uppercase;
-  z-index: 5;
+  position: relative;
+  position: fixed;
+  z-index: 10;
 
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    margin: 0 auto;
-  }
+  .nav-header {
+    display: inline;
 
-  ul {
-    display: flex;
-    list-style-type: none;
-    align-items: center;
-    justify-content: center;
+    .nav-title {
+      display: inline-block;
+    }
   }
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-link {
+  display: inline;
+  float: right;
+  font-size: $base-size * 1.5;
 
   a {
-    color: $color-light;
-    font-size: $base-size * 1.4;
-    font-weight: $font-bold;
+    text-transform: uppercase;
+    font-weight: $font-semiBold;
+    display: inline-block;
+    padding: 18px 18px 0;
+
     text-decoration: none;
-    padding: 7px 15px;
-    transition: all 0.3s ease-in-out;
+    color: $color-light;
 
     &:hover {
       color: $color-accent;
     }
+  }
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: $color-dark;
+  }
+
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid $color-light;
+  }
+
+  .nav > .nav-link {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: $color-dark;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+
+  .nav > .nav-link > a {
+    display: block;
+    width: 100%;
+  }
+
+  .nav > #nav-check:not(:checked) ~ .nav-link {
+    height: 0px;
+  }
+
+  .nav > #nav-check:checked ~ .nav-link {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
   }
 }
 
@@ -97,6 +156,13 @@
   &__inner {
     color: $color-accent;
     text-indent: -90%;
+
+    @media (max-width: 599px) {
+      text-indent: 0;
+    }
+    @media (min-width: 600px) and (max-width: 768px) {
+      text-indent: 0;
+    }
   }
 
   /* animated icon */
@@ -176,5 +242,8 @@ footer {
     font-weight: $font-semiBold;
     color: $color-light;
     margin: auto;
+  }
+  @media (max-width: 599px) {
+    padding-top: 40px;
   }
 }

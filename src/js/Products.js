@@ -10,22 +10,21 @@ class Products {
 
   getData() {
     const thisProducts = this;
-    const url =  settings.db.url + '/' + settings.db.data;
+    const url = settings.db.url + '/' + settings.db.data;
 
     fetch(url)
-      .then(function(Response){
+      .then(function (Response) {
         return Response.json();
       })
-      .then(function(data){
+      .then(function (data) {
         const serverData = data;
         thisProducts.getProducts(serverData);
       });
   }
 
   getProducts(thisData) {
-
     const thisProduct = this;
-    const generatedHTML = templates.productItem({products: thisData});
+    const generatedHTML = templates.productItem({ products: thisData });
     thisProduct.element = utils.createDOMFromHTML(generatedHTML);
     const productsContainer = document.querySelectorAll(select.containerOf.productsContainer);
 

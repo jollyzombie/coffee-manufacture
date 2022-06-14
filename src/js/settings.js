@@ -2,7 +2,7 @@ export const homePageName = 'home';
 
 export const select = {
   templateOf: {
-    productItem : '#template-products',
+    productItem: '#template-products',
   },
   containerOf: {
     productsContainer: '[data-container="productsContainer"]',
@@ -11,7 +11,7 @@ export const select = {
   contact: '#contact',
   home: '#home',
   footer: 'footer',
-  about:'#about',
+  about: '#about',
   pages: '#home, #products, #contact',
   links: '.nav-link',
   hidden: 'hidden',
@@ -19,11 +19,10 @@ export const select = {
 
 export const settings = {
   db: {
-    url: '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3131' : ''),
+    url: '//' + window.location.hostname + (window.location.hostname == 'localhost' ? ':3131' : ''),
     data: 'data',
-  }
+  },
 };
-
 
 export const templates = {
   productItem: Handlebars.compile(document.querySelector(select.templateOf.productItem).innerHTML),
