@@ -52,6 +52,7 @@ const app = {
 
     for (const link of links) {
       link.addEventListener('click', function (event) {
+        event.preventDefault();
         const clickedElement = event.target.getAttribute('href').substring(1);
         thisApp.initActivatePage(clickedElement);
       });

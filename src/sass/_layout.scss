@@ -74,8 +74,8 @@
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
-    right: 0px;
-    top: 0px;
+    right: 26px;
+    top: 10px;
   }
 
   .nav > .nav-btn > label {
@@ -105,8 +105,8 @@
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
-    top: 50px;
-    left: 0px;
+    top: 100px;
+    left: 200px;
   }
 
   .nav > .nav-link > a {
@@ -120,7 +120,7 @@
 
   .nav > #nav-check:checked ~ .nav-link {
     height: calc(100vh - 50px);
-    overflow-y: auto;
+    overflow-y: hidden;
   }
 }
 
