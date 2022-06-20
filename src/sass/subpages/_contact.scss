@@ -1,7 +1,11 @@
 #form {
   position: relative;
-  width: 500px;
+  max-width: 100%;
   margin: 50px auto 100px auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 #contact p {
@@ -12,6 +16,7 @@ input {
   font-family: $font-text;
   text-transform: uppercase;
   width: 470px;
+  max-width: 100%;
   height: 50px;
   padding: 0px 15px 0px 15px;
 
@@ -35,8 +40,8 @@ input {
 }
 
 textarea {
+  max-width: 100%;
   width: 470px;
-  max-width: 470px;
   height: 110px;
   max-height: 110px;
   padding: 15px;

@@ -14,7 +14,7 @@
       display: flex;
       content: '';
       margin: 20px 0;
-      max-width: 110px;
+      max-width: 70%;
       height: 4px;
       background-color: $color-accent;
       border-radius: $radius;
@@ -35,12 +35,14 @@
   }
 }
 
+.row-product {
+  margin: 0 auto;
+}
 .description {
   font-size: $base-size * 1.2;
   color: $color-dark;
   line-height: 24px;
-  padding: 0 70px 0 130px;
-  margin: -32px 0 40px;
+  padding: 0 50px 50px 0;
 
   @media (max-width: 599px) {
     padding: 10px 0 15px;
@@ -61,14 +63,14 @@
     font-weight: $font-bold;
   }
   @media (max-width: 599px), (min-width: 600px) and (max-width: 768px) {
-    padding-bottom: 10px;
+    padding: 7px 0;
   }
 }
 
 .badge {
   visibility: hidden;
   width: 110px;
-  padding-bottom: 15px;
+  padding: 20px 0;
 
   @media (max-width: 599px) {
     display: none;
@@ -86,51 +88,65 @@
 .product-image {
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.47);
   border-radius: $radius;
-  position: relative;
+  max-width: 100%;
 
-  @media (max-width: 600px) {
-    max-width: 350px;
+  @media (max-width: 599px) {
+    max-width: 100%;
     margin: 16px 0;
   }
   @media (min-width: 600px) and (max-width: 768px) {
-    max-width: 550px;
+    max-width: 100%;
     margin: 20px 0;
   }
 }
 
-.prices {
+.image-wrapper {
+  position: relative;
+  max-width: 90%;
+
+  .product-flags {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 150px solid transparent;
+    border-left-width: 150px;
+    border-right-width: 0;
+    border-top-color: $color-accent;
+    top: 0;
+    right: 0;
+
+    @media (max-width: 599px) {
+      margin: 16px 0;
+    }
+    @media (min-width: 600px) and (max-width: 768px) {
+      margin: 20px 0;
+    }
+  }
+}
+
+.new-price,
+.old-price {
   position: absolute;
-  width: 150px;
-  height: 250px;
-  background: $color-accent;
-  clip-path: polygon(100% 50%, 0 50%, 100% 100%);
-  margin: -554px 0 0 404px;
+  color: $color-light;
+  z-index: 5;
+  font-weight: $font-semiBold;
+  text-decoration: line-through;
+  top: 25px;
+  right: 55px;
 
   @media (max-width: 599px) {
-    margin: -415px 0 0 201px;
+    top: 25px;
   }
-  @media (min-width: 600px) and (max-width: 768px) {
-    margin: -571px 0 0 400px;
-  }
+}
 
-  .new-price,
-  .old-price {
-    position: absolute;
-    color: $color-light;
-    z-index: 5;
-    margin: 130px 0 0 75px;
-    font-weight: $font-semiBold;
-    text-decoration: line-through;
-  }
+.new-price {
+  text-decoration: none;
+  font-size: $base-size * 2;
+  font-weight: $font-bold;
+  top: 45px;
+  right: 15px;
 
-  .new-price {
-    text-decoration: none;
-    font-size: $base-size * 2;
-    font-weight: $font-bold;
-    margin: 130px 0 0 95px;
-  }
-
-  .price-line {
-    padding: 10px;
+  @media (max-width: 599px) {
+    top: 45px;
   }
 }

@@ -48,10 +48,6 @@ p {
   font-size: 15px;
   font-weight: $font-regular;
   letter-spacing: 1px;
-
-  @media (max-width: 599px), (min-width: 600px) and (max-width: 768px) {
-    font-size: $base-size * 1.5;
-  }
 }
 
 .section-title {

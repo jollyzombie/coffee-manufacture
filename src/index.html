@@ -56,7 +56,7 @@
       <div
         class="main-carousel js-flickity"
         id="about"
-        data-flickity='{ "autoPlay": 2500, "prevNextButtons": false, "pageDots": false }'
+        data-flickity='{ "autoPlay": 0, "prevNextButtons": false, "pageDots": false }'
       >
         <div class="carousel-cell">
           <h2 class="section-title">about us</h2>
@@ -64,7 +64,7 @@
             <div class="box__img">
               <img src="images/1.png" alt="ping-nihao">
             </div>
-            <div class="box-description">
+            <div class="box__description">
               <h4>Ping<span> Nihao</span></h4>
               <p>
                 Ping is the youngest in the team. He doesn't like calling coffee a mysterious act. He says, a good
@@ -155,17 +155,13 @@
               </div>
           </div>
           <div class="col-sm">
+            <div class="image-wrapper">
             <img class="product-image" src= "{{image}}" alt="la-lagartija">
-            <div class="prices">
+            <div class="product-flags"></div>
               <p class="old-price">${{ regularPrice }}</p>
-              <p class="price-line"></p>
               <p class="new-price">${{ promoPrice }}</p>
             </div>
-            </div>
           </div>
-          </div>
-
-
         </div>
       {{/each}}
     </script>
