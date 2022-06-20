@@ -4,7 +4,7 @@
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom center;
-  height: 70vh;
+  height: 80vh;
 
   @media (max-width: 599px) {
     top: 35px;
@@ -30,21 +30,23 @@
 
 .box {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin-bottom: 50px;
+
 
   &__img {
-    padding-right: 15px;
+    padding-bottom: 10px;
 
     img {
       width: 220px;
       height: 220px;
 
       @media (max-width: 599px) {
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
       }
       @media (min-width: 600px) and (max-width: 768px) {
         width: 120px;
@@ -52,16 +54,22 @@
       }
     }
   }
+
   &__description {
     color: $color-light;
-    width: 35%;
+    width: 28%;
     font-family: $font-text;
     font-size: $base-size;
 
+    @media (max-width: 599px), (min-width: 600px) and (max-width: 768px) {
+      width: 85%;
+    }
+
     h4 {
       font-weight: $font-light;
-      padding-bottom: 30px;
+      padding-bottom: 20px;
       font-size: $base-size * 2;
+      text-align: center;
 
       span {
         font-weight: $font-bold;
